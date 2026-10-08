@@ -1,2 +1,22 @@
-# victoria-buzuk-card
-Interactive student card for Victoria Buzuk (Business English / Logistics)
+# Виктория Бузук · Карточка ученика
+
+Интерактивная карточка ученика (Business English · Logistics).
+
+## Открыть
+
+После включения GitHub Pages:
+
+**https://uladzislaushevchik-sudo.github.io/victoria-buzuk-card/**
+
+## Что внутри
+
+- **Обзор** — профиль, статистика, уровни, фокус и дыры
+- **Грамматика** — статус тем (пройдено / в работе / дыра)
+- **Материалы** — ссылки на Vocabulary Interactive, Speaking, планы и библиотеку
+- **Заметки** — личные заметки преподавателя (сохраняются в браузере)
+
+Тема светлая/тёмная, адаптив под телефон.
+
+## Включение Pages (один раз)
+
+Settings → Pages → Source: **GitHub Actions**
