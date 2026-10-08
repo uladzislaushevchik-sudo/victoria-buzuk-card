@@ -10,7 +10,7 @@
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;padding:0 0 80px}
 header{background:var(--header-bg);color:#fff;padding:18px 14px;text-align:center;position:sticky;top:0;z-index:100}
 header h1{font-size:1.3rem}.subtitle{opacity:.9;font-size:.85rem}
-.tool-btn{padding:6px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;font-size:.78rem;cursor:pointer;margin:8px 4px 0}
+.tool-btn{padding:6px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;font-size:.78rem;cursor:pointer;margin:8px 4px 0;font-weight:600}
 .container{max-width:900px;margin:0 auto;padding:14px 12px}
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;position:sticky;top:100px;background:var(--bg);padding:8px 0;z-index:50}
 .tab{padding:8px 12px;border:2px solid var(--border);border-radius:20px;background:var(--card);cursor:pointer;font-size:.8rem;font-weight:600;color:var(--primary)}
@@ -23,15 +23,18 @@ header h1{font-size:1.3rem}.subtitle{opacity:.9;font-size:.85rem}
 .stat{background:var(--bg);border-radius:10px;padding:10px;text-align:center;border:1px solid var(--border)}
 .stat .value{font-size:1.2rem;font-weight:700;color:var(--primary)}.stat .label{font-size:.7rem;color:var(--muted)}
 .tag{padding:4px 10px;border-radius:14px;font-size:.75rem;font-weight:600;display:inline-block;margin:2px}
-.tag.done{background:var(--done-bg);color:var(--success)}.tag.gap{background:var(--gap-bg);color:var(--warning)}.tag.progress{background:var(--progress-bg);color:var(--secondary)}.tag.focus{background:#e8eaf6;color:#3949ab}
-.grammar-item{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 10px;border-radius:8px;margin-bottom:5px;background:var(--bg);border-left:4px solid var(--border);font-size:.85rem}
-.grammar-item.done{border-left-color:var(--success)}.grammar-item.gap{border-left-color:var(--warning)}.grammar-item.progress{border-left-color:var(--accent)}
-.badge{font-size:.68rem;padding:2px 7px;border-radius:10px;font-weight:600;cursor:pointer;border:none}
-.badge.done{background:var(--done-bg);color:var(--success)}.badge.gap{background:var(--gap-bg);color:var(--warning)}.badge.progress{background:var(--progress-bg);color:var(--secondary)}
+.tag.done{background:var(--done-bg);color:var(--success)}.tag.gap{background:var(--gap-bg);color:var(--warning)}.tag.focus{background:#e8eaf6;color:#3949ab}
+.theme-head{font-weight:700;color:var(--primary);font-size:.9rem;margin:14px 0 8px;padding:6px 10px;background:var(--progress-bg);border-radius:8px}
+.grammar-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:8px;margin-bottom:5px;background:var(--bg);border-left:4px solid var(--border);font-size:.85rem;cursor:pointer}
+.grammar-item.done{border-left-color:var(--success)}.grammar-item.gap{border-left-color:var(--warning)}
+.grammar-item input{width:18px;height:18px;accent-color:var(--success);flex-shrink:0;margin-top:2px}
+.badge{font-size:.68rem;padding:2px 7px;border-radius:10px;font-weight:600}
+.badge.done{background:var(--done-bg);color:var(--success)}.badge.gap{background:var(--gap-bg);color:var(--warning)}
 .form-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:flex-end}
-.form-group{flex:1;min-width:120px}.form-group label{display:block;font-size:.72rem;color:var(--muted);margin-bottom:3px;font-weight:600}
+.form-group{flex:1;min-width:110px}.form-group label{display:block;font-size:.72rem;color:var(--muted);margin-bottom:3px;font-weight:600}
 .form-group input,.form-group select{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--input-bg);color:var(--text);font-size:.88rem}
-.btn{padding:8px 14px;border-radius:18px;border:none;font-weight:600;font-size:.82rem;cursor:pointer}.btn-primary{background:var(--primary);color:#fff}.btn-danger{background:transparent;color:var(--error);border:1px solid var(--error);font-size:.75rem;padding:4px 10px}
+.btn{padding:8px 14px;border-radius:18px;border:none;font-weight:600;font-size:.82rem;cursor:pointer}.btn-primary{background:var(--primary);color:#fff}
+.btn-danger{background:transparent;color:var(--error);border:1px solid var(--error);font-size:.75rem;padding:4px 10px}
 .vocab-item{display:flex;gap:8px;padding:10px;border-radius:8px;margin-bottom:6px;background:var(--bg);border-left:3px solid var(--accent);font-size:.88rem}
 .vocab-item .en{font-weight:700;color:var(--primary)}.vocab-item .ru{color:var(--muted);font-size:.82rem}.vocab-item .ex{font-size:.75rem;color:var(--muted);font-style:italic}
 .vocab-item .pos{font-size:.68rem;padding:1px 6px;border-radius:6px;background:var(--progress-bg);color:var(--secondary)}
@@ -40,11 +43,12 @@ header h1{font-size:1.3rem}.subtitle{opacity:.9;font-size:.85rem}
 .hw-item{padding:12px;border-radius:10px;margin-bottom:8px;background:var(--bg);border:1px solid var(--border)}
 .hw-status{padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:600;cursor:pointer;border:none}
 .hw-status.pending{background:var(--gap-bg);color:var(--warning)}.hw-status.done{background:var(--done-bg);color:var(--success)}
-.notes-area{width:100%;min-height:120px;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--input-bg);color:var(--text);font-size:.88rem}
+.notes-area{width:100%;min-height:100px;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--input-bg);color:var(--text);font-size:.88rem}
 .count-badge{display:inline-block;background:var(--primary);color:#fff;font-size:.7rem;padding:1px 7px;border-radius:10px;margin-left:6px}
-.filter-btn{padding:4px 10px;border-radius:12px;border:1px solid var(--border);background:var(--card);font-size:.75rem;cursor:pointer;font-weight:600;color:var(--muted);margin-right:4px}
+.filter-btn{padding:4px 10px;border-radius:12px;border:1px solid var(--border);background:var(--card);font-size:.75rem;cursor:pointer;font-weight:600;color:var(--muted);margin:0 4px 4px 0}
 .filter-btn.active{background:var(--primary);color:#fff}
-.empty-state{text-align:center;padding:24px;color:var(--muted)}
+.empty-state{text-align:center;padding:20px;color:var(--muted)}
+.cat-title{font-weight:700;color:var(--primary);font-size:.9rem;margin:12px 0 6px}
 footer{text-align:center;padding:18px;font-size:.72rem;color:var(--muted)}
 </style>
 </head>
@@ -64,13 +68,11 @@ footer{text-align:center;padding:18px;font-size:.72rem;color:var(--muted)}
 <button class="tab" data-tab="homework">ДЗ</button>
 <button class="tab" data-tab="notes">Заметки</button>
 </div>
-
 <section id="overview" class="section active">
 <div class="card">
 <span class="avatar">ВБ</span>
-<strong style="font-size:1.25rem">Виктория Бузук</strong>
-<span style="margin-left:8px;padding:2px 10px;border-radius:12px;font-size:.75rem;background:#e8f5e9;color:#2e7d32">● Активна</span>
-<div style="margin-top:8px;font-size:.82rem;color:var(--muted)">ДР: 23 апреля · Старт: 2 января 2026</div>
+<strong style="font-size:1.2rem">Виктория Бузук</strong>
+<div style="margin-top:6px;font-size:.82rem;color:var(--muted)">ДР: 23 апреля · Старт: 2 января 2026</div>
 <div class="stats-grid">
 <div class="stat"><div class="value">54</div><div class="label">занятий</div></div>
 <div class="stat"><div class="value">2×</div><div class="label">в неделю</div></div>
@@ -84,46 +86,39 @@ footer{text-align:center;padding:18px;font-size:.72rem;color:var(--muted)}
 <span class="tag focus">Логистика</span>
 <span class="tag focus">Emails & Claims</span>
 <p style="margin-top:10px;font-size:.85rem;color:var(--muted)">Дыры: артикли, Passive, relative clauses</p>
-</div>
-<div class="card">
-<h2>Статус</h2>
-<span class="tag done">Времена</span> <span class="tag done">Conditionals</span> <span class="tag done">Модалки</span>
-<span class="tag gap">Articles</span> <span class="tag gap">Passive</span> <span class="tag gap">Relative</span>
-<div style="margin-top:12px;font-size:.82rem;color:var(--muted)" id="quickStats">—</div>
+<div style="margin-top:10px;font-size:.82rem;color:var(--muted)" id="quickStats">—</div>
 </div>
 </section>
-
 <section id="grammar" class="section">
 <div class="card">
 <h2>Грамматика</h2>
-<div id="gramFilters" style="margin-bottom:10px">
+<p style="font-size:.8rem;color:var(--muted);margin-bottom:10px">Отмечай чекбоксом пройденные темы.</p>
+<div style="margin-bottom:10px">
 <button class="filter-btn active" data-f="all">Все</button>
 <button class="filter-btn" data-f="done">Пройдено</button>
-<button class="filter-btn" data-f="progress">В работе</button>
-<button class="filter-btn" data-f="gap">Дыры</button>
+<button class="filter-btn" data-f="gap">Не пройдено</button>
 </div>
-<ul class="grammar-list" id="grammarList" style="list-style:none"></ul>
+<div id="grammarList"></div>
 </div>
 </section>
-
 <section id="vocab" class="section">
 <div class="card">
 <h2>Словарь <span class="count-badge" id="vocabCount">0</span></h2>
-<p style="font-size:.8rem;color:var(--muted);margin-bottom:10px">54 слова из материалов Виктории загружаются автоматически.</p>
+<p style="font-size:.8rem;color:var(--muted);margin-bottom:10px">Слова сгруппированы по темам.</p>
 <div class="form-row">
 <div class="form-group"><label>Слово</label><input id="vWord" placeholder="ensure"></div>
 <div class="form-group"><label>Перевод</label><input id="vTrans" placeholder="обеспечивать"></div>
 <div class="form-group"><label>Часть речи</label><select id="vPos"><option value="">—</option><option>verb</option><option>noun</option><option>adj</option><option>adv</option><option>phrase</option></select></div>
+<div class="form-group"><label>Тема</label><select id="vTheme"><option>Business Qualities</option><option>Business & Logistics Verbs</option><option>Adverbs & Linking</option><option>Problem-solving & Communication</option><option>Other</option></select></div>
 </div>
 <div class="form-row">
 <div class="form-group"><label>Пример</label><input id="vEx" placeholder="We must ensure on-time delivery."></div>
 <button class="btn btn-primary" onclick="addVocab()">+ Добавить</button>
 </div>
 <div id="vocabList"></div>
-<div class="empty-state" id="vocabEmpty">Загрузка слов…</div>
+<div class="empty-state" id="vocabEmpty">Загрузка…</div>
 </div>
 </section>
-
 <section id="irregular" class="section">
 <div class="card">
 <h2>Irregular Verbs <span class="count-badge" id="ivCount">0</span></h2>
@@ -132,12 +127,11 @@ footer{text-align:center;padding:18px;font-size:.72rem;color:var(--muted)}
 <div class="empty-state" id="ivEmpty" style="display:none">Пусто</div>
 </div>
 </section>
-
 <section id="homework" class="section">
 <div class="card">
-<h2>Домашние задания <span class="count-badge" id="hwCount">0</span></h2>
+<h2>ДЗ <span class="count-badge" id="hwCount">0</span></h2>
 <div class="form-row">
-<div class="form-group" style="flex:2"><label>Задание</label><input id="hwTask" placeholder="Claim email с Passive"></div>
+<div class="form-group" style="flex:2"><label>Задание</label><input id="hwTask"></div>
 <div class="form-group"><label>Дедлайн</label><input type="date" id="hwDeadline"></div>
 </div>
 <div class="form-row">
@@ -154,7 +148,6 @@ footer{text-align:center;padding:18px;font-size:.72rem;color:var(--muted)}
 <div class="empty-state" id="hwEmpty" style="display:none">Нет ДЗ</div>
 </div>
 </section>
-
 <section id="notes" class="section">
 <div class="card">
 <h2>Заметки</h2>
@@ -165,10 +158,9 @@ footer{text-align:center;padding:18px;font-size:.72rem;color:var(--muted)}
 </div>
 <footer>Виктория Бузук · id=6</footer>
 <script>
-const KEYS={theme:'vb_theme',notes:'vb_notes',vocab:'vb_vocab',irregular:'vb_irregular',homework:'vb_homework',grammar:'vb_grammar'};
-const DEFAULT_GRAMMAR=[{id:'tenses',cat:'Времена',topic:'Present/Past/Future',status:'done'},{id:'cond012',cat:'Условные',topic:'Conditionals 0-2',status:'done'},{id:'modals',cat:'Модальные',topic:'can, must, should…',status:'done'},{id:'passive',cat:'Пассив',topic:'Passive Voice',status:'progress'},{id:'articles',cat:'Артикли',topic:'a/an/the/zero',status:'gap'},{id:'relative',cat:'Придаточные',topic:'Relative clauses',status:'gap'},{id:'linking',cat:'Связки',topic:'Linking words',status:'progress'},{id:'emails',cat:'Бизнес',topic:'Emails & claims',status:'progress'},{id:'prep',cat:'Предлоги',topic:'Prepositions',status:'done'},{id:'gerund',cat:'Герундий',topic:'Gerund vs Infinitive',status:'progress'},{id:'comp',cat:'Сравнение',topic:'Comparatives',status:'progress'},{id:'reported',cat:'Косв. речь',topic:'Reported speech',status:'gap'},{id:'cond3',cat:'Условные',topic:'Conditional 3 + mixed',status:'gap'},{id:'there',cat:'Базовые',topic:'There is/are, some/any',status:'progress'},{id:'questions',cat:'Вопросы',topic:'Question forms',status:'done'}];
+const KEYS={theme:'vb_theme',notes:'vb_notes',vocab:'vb_vocab_v2',irregular:'vb_irregular',homework:'vb_homework',grammar:'vb_grammar_v2'};
+const DEFAULT_GRAMMAR=[{id:'tenses_all',cat:'Времена',topic:'Present / Past / Future (Simple, Continuous, Perfect)',done:true},{id:'cond_012',cat:'Условные предложения',topic:'Conditionals 0, 1, 2',done:true},{id:'cond_3',cat:'Условные предложения',topic:'Conditional 3 + mixed',done:false},{id:'modals',cat:'Модальные глаголы',topic:'can, must, should, may, might, have to…',done:true},{id:'passive',cat:'Пассивный залог',topic:'Passive Voice (Present / Past / Perfect)',done:false},{id:'articles',cat:'Артикли',topic:'a / an / the / zero article',done:false},{id:'relative',cat:'Придаточные',topic:'Relative clauses (who / which / that / where)',done:false},{id:'linking',cat:'Связующие слова',topic:'Linking words & discourse markers',done:false},{id:'emails',cat:'Бизнес-английский',topic:'Business email structure & claims language',done:false},{id:'prep',cat:'Предлоги',topic:'Prepositions of time / place / direction',done:true},{id:'gerund',cat:'Герундий и инфинитив',topic:'Gerund vs Infinitive',done:false},{id:'comp',cat:'Сравнение',topic:'Comparatives & superlatives',done:false},{id:'reported',cat:'Косвенная речь',topic:'Reported speech (basics)',done:false},{id:'there',cat:'Базовые конструкции',topic:'There is / There are · some / any / no',done:false},{id:'questions',cat:'Вопросы',topic:'Question forms & tags',done:true}];
 let vocab=[],irregular=[],homework=[],grammar=[],gramFilter='all',hwFilter='all';
-
 async function load(){
 try{vocab=JSON.parse(localStorage.getItem(KEYS.vocab)||'null')}catch{vocab=null}
 if(!Array.isArray(vocab)||!vocab.length){
@@ -176,35 +168,80 @@ try{const r=await fetch('data/vocab.json');vocab=await r.json();localStorage.set
 }
 try{irregular=JSON.parse(localStorage.getItem(KEYS.irregular)||'null')}catch{irregular=null}
 if(!Array.isArray(irregular)||!irregular.length){
-try{const r=await fetch('data/irregular.json');irregular=await r.json();localStorage.setItem(KEYS.irregular,JSON.stringify(irregular))}catch(e){console.warn(e);irregular=[]}
+try{const r=await fetch('data/irregular.json');irregular=await r.json();localStorage.setItem(KEYS.irregular,JSON.stringify(irregular))}catch(e){irregular=[]}
 }
 try{homework=JSON.parse(localStorage.getItem(KEYS.homework)||'[]')}catch{homework=[]}
 if(!Array.isArray(homework))homework=[];
-try{const g=JSON.parse(localStorage.getItem(KEYS.grammar)||'null');grammar=g&&g.length?g:JSON.parse(JSON.stringify(DEFAULT_GRAMMAR))}catch{grammar=JSON.parse(JSON.stringify(DEFAULT_GRAMMAR))}
+try{const g=JSON.parse(localStorage.getItem(KEYS.grammar)||'null');
+if(g&&Array.isArray(g)&&g.length){grammar=g.map(i=>typeof i.done==='boolean'?i:{...i,done:i.status==='done'})}
+else{grammar=JSON.parse(JSON.stringify(DEFAULT_GRAMMAR))}
+}catch{grammar=JSON.parse(JSON.stringify(DEFAULT_GRAMMAR))}
 const notes=localStorage.getItem(KEYS.notes);if(notes)document.getElementById('teacherNotes').value=notes;
-if(localStorage.getItem(KEYS.theme)==='dark'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('themeBtn').classList.add('on')}
+if(localStorage.getItem(KEYS.theme)==='dark')document.documentElement.setAttribute('data-theme','dark');
 renderAll();
 }
-
 function save(k,d){localStorage.setItem(k,JSON.stringify(d))}
 document.querySelectorAll('.tab').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));btn.classList.add('active');document.getElementById(btn.dataset.tab).classList.add('active')})});
 function toggleTheme(){const h=document.documentElement;const n=h.getAttribute('data-theme')==='dark'?'light':'dark';if(n==='dark')h.setAttribute('data-theme','dark');else h.removeAttribute('data-theme');localStorage.setItem(KEYS.theme,n)}
 function saveNotes(){localStorage.setItem(KEYS.notes,document.getElementById('teacherNotes').value);alert('Сохранено')}
-function addVocab(){const word=document.getElementById('vWord').value.trim();if(!word)return alert('Введите слово');vocab.unshift({id:Date.now(),word,trans:document.getElementById('vTrans').value.trim(),pos:document.getElementById('vPos').value,ex:document.getElementById('vEx').value.trim(),added:new Date().toISOString().slice(0,10)});save(KEYS.vocab,vocab);['vWord','vTrans','vEx'].forEach(id=>document.getElementById(id).value='');document.getElementById('vPos').value='';renderVocab();updateQuickStats()}
+function addVocab(){
+const word=document.getElementById('vWord').value.trim();if(!word)return alert('Введите слово');
+vocab.unshift({id:Date.now(),word,trans:document.getElementById('vTrans').value.trim(),pos:document.getElementById('vPos').value,ex:document.getElementById('vEx').value.trim(),theme:document.getElementById('vTheme').value,added:new Date().toISOString().slice(0,10)});
+save(KEYS.vocab,vocab);['vWord','vTrans','vEx'].forEach(id=>document.getElementById(id).value='');renderVocab();updateQuickStats();
+}
 function deleteVocab(id){if(!confirm('Удалить?'))return;vocab=vocab.filter(v=>v.id!==id);save(KEYS.vocab,vocab);renderVocab();updateQuickStats()}
-function renderVocab(){const list=document.getElementById('vocabList'),empty=document.getElementById('vocabEmpty');document.getElementById('vocabCount').textContent=vocab.length;if(!vocab.length){list.innerHTML='';empty.style.display='block';empty.textContent='Нет слов';return}empty.style.display='none';list.innerHTML=vocab.map(v=>`<div class="vocab-item"><div style="flex:1"><span class="en">${esc(v.word)}</span>${v.pos?` <span class="pos">${esc(v.pos)}</span>`:''}${v.trans?`<div class="ru">${esc(v.trans)}</div>`:''}${v.ex?`<div class="ex">${esc(v.ex)}</div>`:''}</div><button class="btn btn-danger" onclick="deleteVocab(${v.id})">✕</button></div>`).join('')}
+function renderVocab(){
+const list=document.getElementById('vocabList'),empty=document.getElementById('vocabEmpty');
+document.getElementById('vocabCount').textContent=vocab.length;
+if(!vocab.length){list.innerHTML='';empty.style.display='block';empty.textContent='Нет слов';return}
+empty.style.display='none';
+const order=['Business Qualities','Business & Logistics Verbs','Adverbs & Linking','Problem-solving & Communication','Other'];
+const byTheme={};
+vocab.forEach(v=>{const t=v.theme||'Other';if(!byTheme[t])byTheme[t]=[];byTheme[t].push(v)});
+const themes=order.filter(t=>byTheme[t]&&byTheme[t].length).concat(Object.keys(byTheme).filter(t=>!order.includes(t)));
+list.innerHTML=themes.map(theme=>`<div class="theme-head">${esc(theme)} (${byTheme[theme].length})</div>`+byTheme[theme].map(v=>`<div class="vocab-item"><div style="flex:1"><span class="en">${esc(v.word)}</span>${v.pos?` <span class="pos">${esc(v.pos)}</span>`:''}${v.trans?`<div class="ru">${esc(v.trans)}</div>`:''}${v.ex?`<div class="ex">${esc(v.ex)}</div>`:''}</div><button class="btn btn-danger" onclick="deleteVocab(${v.id})">✕</button></div>`).join('')).join('');
+}
 function addIrregular(){irregular.push({id:Date.now(),inf:'',past:'',pp:'',trans:''});save(KEYS.irregular,irregular);renderIrregular();updateQuickStats()}
 function updateIrregular(id,f,v){const item=irregular.find(x=>x.id===id);if(item){item[f]=v;save(KEYS.irregular,irregular)}}
 function deleteIrregular(id){irregular=irregular.filter(x=>x.id!==id);save(KEYS.irregular,irregular);renderIrregular();updateQuickStats()}
-function renderIrregular(){const body=document.getElementById('ivBody'),empty=document.getElementById('ivEmpty');document.getElementById('ivCount').textContent=irregular.length;if(!irregular.length){body.innerHTML='';empty.style.display='block';return}empty.style.display='none';body.innerHTML=irregular.map(v=>`<tr><td><input value="${escAttr(v.inf)}" onchange="updateIrregular(${v.id},'inf',this.value)" placeholder="go"></td><td><input value="${escAttr(v.past)}" onchange="updateIrregular(${v.id},'past',this.value)" placeholder="went"></td><td><input value="${escAttr(v.pp)}" onchange="updateIrregular(${v.id},'pp',this.value)" placeholder="gone"></td><td><input value="${escAttr(v.trans)}" onchange="updateIrregular(${v.id},'trans',this.value)" placeholder="идти"></td><td><button class="btn btn-danger" onclick="deleteIrregular(${v.id})">✕</button></td></tr>`).join('')}
-function addHomework(){const task=document.getElementById('hwTask').value.trim();if(!task)return alert('Введите задание');homework.unshift({id:Date.now(),task,deadline:document.getElementById('hwDeadline').value||'',source:document.getElementById('hwSource').value.trim(),notes:document.getElementById('hwNotes').value.trim(),status:'pending',created:new Date().toISOString().slice(0,10)});save(KEYS.homework,homework);['hwTask','hwDeadline','hwSource','hwNotes'].forEach(id=>document.getElementById(id).value='');renderHomework();updateQuickStats()}
+function renderIrregular(){
+const body=document.getElementById('ivBody'),empty=document.getElementById('ivEmpty');
+document.getElementById('ivCount').textContent=irregular.length;
+if(!irregular.length){body.innerHTML='';empty.style.display='block';return}
+empty.style.display='none';
+body.innerHTML=irregular.map(v=>`<tr><td><input value="${escAttr(v.inf)}" onchange="updateIrregular(${v.id},'inf',this.value)" placeholder="go"></td><td><input value="${escAttr(v.past)}" onchange="updateIrregular(${v.id},'past',this.value)" placeholder="went"></td><td><input value="${escAttr(v.pp)}" onchange="updateIrregular(${v.id},'pp',this.value)" placeholder="gone"></td><td><input value="${escAttr(v.trans)}" onchange="updateIrregular(${v.id},'trans',this.value)" placeholder="идти"></td><td><button class="btn btn-danger" onclick="deleteIrregular(${v.id})">✕</button></td></tr>`).join('');
+}
+function addHomework(){
+const task=document.getElementById('hwTask').value.trim();if(!task)return alert('Введите задание');
+homework.unshift({id:Date.now(),task,deadline:document.getElementById('hwDeadline').value||'',source:document.getElementById('hwSource').value.trim(),notes:document.getElementById('hwNotes').value.trim(),status:'pending',created:new Date().toISOString().slice(0,10)});
+save(KEYS.homework,homework);['hwTask','hwDeadline','hwSource','hwNotes'].forEach(id=>document.getElementById(id).value='');renderHomework();updateQuickStats();
+}
 function cycleHwStatus(id){const item=homework.find(h=>h.id===id);if(!item)return;item.status=item.status==='pending'?'done':'pending';save(KEYS.homework,homework);renderHomework();updateQuickStats()}
 function deleteHomework(id){if(!confirm('Удалить?'))return;homework=homework.filter(h=>h.id!==id);save(KEYS.homework,homework);renderHomework();updateQuickStats()}
-function renderHomework(){const list=document.getElementById('hwList'),empty=document.getElementById('hwEmpty');const filtered=hwFilter==='all'?homework:homework.filter(h=>h.status===hwFilter);document.getElementById('hwCount').textContent=homework.length;if(!filtered.length){list.innerHTML='';empty.style.display='block';return}empty.style.display='none';list.innerHTML=filtered.map(h=>{const sl=h.status==='done'?'Выполнено':'В процессе',sc=h.status==='done'?'done':'pending';return `<div class="hw-item"><div style="font-weight:600">${esc(h.task)}</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px"><button class="hw-status ${sc}" onclick="cycleHwStatus(${h.id})">${sl}</button> ${h.deadline||''} <button class="btn btn-danger" onclick="deleteHomework(${h.id})">✕</button></div></div>`}).join('')}
+function renderHomework(){
+const list=document.getElementById('hwList'),empty=document.getElementById('hwEmpty');
+const filtered=hwFilter==='all'?homework:homework.filter(h=>h.status===hwFilter);
+document.getElementById('hwCount').textContent=homework.length;
+if(!filtered.length){list.innerHTML='';empty.style.display='block';return}
+empty.style.display='none';
+list.innerHTML=filtered.map(h=>{const sl=h.status==='done'?'Выполнено':'В процессе',sc=h.status==='done'?'done':'pending';return `<div class="hw-item"><div style="font-weight:600">${esc(h.task)}</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px"><button class="hw-status ${sc}" onclick="cycleHwStatus(${h.id})">${sl}</button> ${h.deadline||''} <button class="btn btn-danger" onclick="deleteHomework(${h.id})">✕</button></div></div>`}).join('');
+}
 document.querySelectorAll('[data-hwf]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-hwf]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');hwFilter=btn.dataset.hwf;renderHomework()})});
-function cycleGrammarStatus(id){const item=grammar.find(g=>g.id===id);if(!item)return;const o=['done','progress','gap'];item.status=o[(o.indexOf(item.status)+1)%3];save(KEYS.grammar,grammar);renderGrammar()}
-function renderGrammar(){const list=document.getElementById('grammarList');const filtered=gramFilter==='all'?grammar:grammar.filter(g=>g.status===gramFilter);const labels={done:'пройдено',progress:'в работе',gap:'дыра'};list.innerHTML=filtered.map(g=>`<li class="grammar-item ${g.status}"><span style="flex:1"><strong>${esc(g.cat)}</strong> · ${esc(g.topic)}</span><button class="badge ${g.status}" onclick="cycleGrammarStatus('${g.id}')">${labels[g.status]}</button></li>`).join('')}
-document.querySelectorAll('#gramFilters .filter-btn, [data-f]').forEach(btn=>{if(btn.dataset.f)btn.addEventListener('click',()=>{document.querySelectorAll('[data-f]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');gramFilter=btn.dataset.f;renderGrammar()})});
+function toggleGrammar(id,checked){const item=grammar.find(g=>g.id===id);if(!item)return;item.done=checked;save(KEYS.grammar,grammar);renderGrammar()}
+function renderGrammar(){
+const list=document.getElementById('grammarList');
+const byCat={};
+grammar.forEach(g=>{
+if(gramFilter==='done'&&!g.done)return;
+if(gramFilter==='gap'&&g.done)return;
+if(!byCat[g.cat])byCat[g.cat]=[];
+byCat[g.cat].push(g);
+});
+const cats=Object.keys(byCat);
+if(!cats.length){list.innerHTML='<div class="empty-state">Нет тем</div>';return}
+list.innerHTML=cats.map(cat=>`<div class="cat-title">${esc(cat)}</div>`+byCat[cat].map(g=>`<label class="grammar-item ${g.done?'done':'gap'}"><input type="checkbox" ${g.done?'checked':''} onchange="toggleGrammar('${g.id}',this.checked)"><span style="flex:1">${esc(g.topic)}</span><span class="badge ${g.done?'done':'gap'}">${g.done?'пройдено':'не пройдено'}</span></label>`).join('')).join('');
+}
+document.querySelectorAll('[data-f]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-f]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');gramFilter=btn.dataset.f;renderGrammar()})});
 function updateQuickStats(){document.getElementById('quickStats').textContent=`Словарь: ${vocab.length} · Irregular: ${irregular.length} · ДЗ открыто: ${homework.filter(h=>h.status==='pending').length}`}
 function exportData(){const data={student:'Виктория Бузук',vocab,irregular,homework,grammar,notes:localStorage.getItem(KEYS.notes)||''};const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='victoria_export.json';a.click()}
 function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
